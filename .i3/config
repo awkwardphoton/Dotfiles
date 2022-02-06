@@ -255,6 +255,7 @@ mode "exit: [l]ogout, [r]eboot, [s]hutdown" {
 
 bindsym $mod+shift+e mode "exit: [l]ogout, [r]eboot, [s]hutdown"
 
+bindsym $mod+shift exec 'brightnessctl set +10%'
  
 
  
@@ -274,7 +275,8 @@ exec_always wal -i ~/Pictures/Wallpapers
 # *** Execute When i3wm reloads *** #
 #===================================#
 
-
+exec_always pkill dunst && dunst &
+exec_always ln -sf    "${HOME}/.cache/wal/dunstrc"    "${HOME}/.config/dunst/dunstrc"
 
 #=====================================#
 # *** Workspace specific settings *** #
