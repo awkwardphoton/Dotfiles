@@ -1,89 +1,30 @@
-/*
- * Jellyfin Custom CSS
- *
- * This stylesheet provides custom styling for a dark-themed Jellyfin UI.
- * It's been tidied up and optimized for clarity and efficiency.
- */
-
-/* Import a custom font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
-/* --- General UI & Font Styles --- */
-/* Set a consistent font and a dark background for all primary text elements and containers */
-body,
-html,
-.backgroundContainer,
-.dialog,
-.itemName,
-.sectionTitle,
-.cardText,
-.cardText-secondary,
-.item-name,
-.item-description,
-.listItem-primary,
-.listItem-secondary,
-.emby-button,
-.emby-button-foreground,
-button,
-input,
-select,
-textarea {
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    background-color: #060e1b;
-}
-
-/* Apply bold font weight to section titles */
-.sectionTitle {
-    font-weight: bold;
-}
-
-/* --- Header & Navigation Bar --- */
-/* Hide the cast button from the header */
-.headerCastButton {
-    display: none;
-}
-
-/* Set a dark background for the main header */
-.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred {
-    background-color: #091423;
-}
-
-/* Ensure the header is transparent when the home button is hidden */
-.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred.noHomeButtonHeader {
-    background: none;
-}
-
-/* --- Card & Image Styles --- */
-/* Apply rounded corners and hide posters */
-.cardContent-button,
-.itemDetailImage,
-.cardImageContainer {
-    border-radius: 1em;
-}
-
-/* Hide the poster image and its container to prevent it from being displayed at all */
-.cardImageContainer {
-    background: none;
-    display: none;
-}
-
-/* Hide the main poster image on detail pages */
-.itemDetailImage {
-    display: none;
-}
-
-/* --- Other Custom Elements --- */
-/* Remove background from detail page container */
-.detailPagePrimaryContainer {
-    background: none;
-}
-
-/* Style the button */
-.emby-button-foreground {
-    background: #b5d8ff;
+.emby-tab-button {
+    /* Base style for all buttons, including the ones in the middle */
     padding: 1rem 2rem;
-    border-radius: 5rem;
+    border-radius: 0.25rem;
+    background: #351f2b;
+    color: #b798a7;
+    transition: background 0.2s ease;
+}
+
+.emby-tab-button.emby-tab-button-active {
+    /* Style for the active button, overriding the base background and color */
+    background: #b5d8ff;
     color: #174c76;
+}
+
+.emby-tab-button:first-child {
+    /* Style for the first button in the group */
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.emby-tab-button:last-child {
+    /* Style for the last button in the group */
+    border-top-right-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
 }
