@@ -53,3 +53,7 @@ html,
 .cardImageContainer {
     background: none;
 }
+.itemDetailImage {
+    display: none;
+}
+
