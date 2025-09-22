@@ -1,0 +1,55 @@
+/*
+ * Jellyfin Custom CSS
+ *
+ * This stylesheet provides custom styling for a dark-themed Jellyfin UI.
+ * It's been tidied up and optimized for clarity and efficiency.
+ */
+
+/* Import a custom font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* --- General UI Styles --- */
+/* Set a consistent font and a dark background for the entire UI */
+body,
+html,
+.backgroundContainer,
+.dialog {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: #091423;
+}
+
+/* Apply bold font weight to section titles */
+.sectionTitle {
+    font-weight: bold;
+}
+
+/* --- Header & Navigation Bar --- */
+/* Hide the cast button from the header */
+.headerCastButton {
+    display: none;
+}
+
+/* Set a dark background for the main header */
+.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred {
+    background-color: #03060a;
+}
+
+/* Ensure the header is transparent when the home button is hidden */
+.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred.noHomeButtonHeader {
+    background: none;
+}
+
+/* --- Card & Image Styles --- */
+/* Apply rounded corners to item posters and buttons */
+.cardContent-button,
+.itemDetailImage,
+.cardImageContainer {
+    border-radius: 1em;
+}
+
+/* Remove the background from the card container to prevent a double border effect */
+.cardImageContainer {
+    background: none;
+}
